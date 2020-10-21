@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/log-in.css">
+<link rel="stylesheet" type="text/css" href="css/account.css">
+<link rel="stylesheet" type="text/css" href="css/gallery.css">
+
+<title>Prihlásenie</title>
+
+</head>
+<body>
+	<div id="mobile_menu" class="hidden">
+		<div><span class="fa fa-close"></span></div>
+		<script>
+			(function(){
+				document.querySelector("#mobile_menu .fa.fa-close").onclick = function() {
+					document.querySelector("#mobile_menu").classList.add("hidden")
+				}
+			})()
+		</script>
+		<div>
+			<ul>
+				<li><a href="account.html">Účet</a></li>
+				<li><a href="gallery.html">Galéria</a></li>
+				<li><a href="#">Rozvrh</a></li>
+				<li><a href="#">Úlohy</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="container">
+		<div id="user-bar">
+			<div id="mobile_menu_opener">
+				<span class="fa fa-navicon"></span>
+			</div>
+
+			<script>
+				(function(){
+					document.querySelector("#mobile_menu_opener").onclick = function() {
+						document.querySelector("#mobile_menu").classList.remove("hidden")
+					}
+				})()
+			</script>
+
+			<div id="app-name">
+				<h1><a href="prihlasenie.html">Študentský diár</a></h1>
+			</div>
+
+			<div id="user-detail">
+				<a href="prihlasenie.html" class="fa fa-user" title="Prihlásiť"><span>Prihlásiť</span></a>
+				<a href="prihlasenie.html" class="fa fa-power-off" title="Odhlásiť"><span>Odhlásiť</span></a>
+			</div>
+			<!--Koniec usera-->
+		</div>
+		<nav>
+			<ul>
+				<li><a href="account.html" title="Účet"><img src="https://media0.webgarden.com/images/media0:4e2b6b54034a9.jpg/wall_ANIMALSINLOVE_1280x1024_07.jpg" alt="Profilová fotka" width="40" height="40"></a></li>
+				<li>
+					<a href="account.html" title="Účet">
+						<svg viewBox="0 0 40 40" width="40" height="40">
+						    <path stroke-width="0" d="M 39.999999,39.999999 H 4.9993032e-7 v -4.34749 L 13.645542,26.912239 v -3.63104 c -1.872406,0 -3.446551,-2.17911 -3.446551,-3.51579 V 8.2394695 c 0,-2.64654 4.448832,-8.23947 9.97991,-8.23947 5.531075,0 9.712545,5.61375 9.712545,8.18141 V 19.765409 c 0,1.33668 -1.52757,3.51579 -3.461839,3.51579 v 3.62129 l 13.532626,7.72389 z"/>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="gallery.html" title="Galéria">
+						<svg viewBox="0 0 100 100" width="40" height="40">
+								<path fill="none" stroke-width="8.9" stroke-linecap="butt" stroke-linejoin="bevel" d="M 94.5967 55.8325 V 93.6858 H 55.8271 m -11.3109 0 H 5.25859 V 55.7402 m 0 -11.3027 V 6.66614 H 44.3225 m 11.4884 0 H 94.5967 V 44.5165"/>
+								<path d="M 20.7036 78.5687 H 79.3419 L 65.0214 60.4448 L 54.7026 73.0125 L 40.1505 55.1531 c 0 0 -19.976 22.8865 -19.4469 23.4156 Z"/>
+								<circle cx="67.4688" cy="33.3911" r="8.33437"/>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="Rozvrh">
+						<svg viewBox="0 0 100 100" width="40" height="40">
+							<g stroke-width="0">
+								<rect x="20.013454" y="38.822006" rx="1.3847109" ry="1.345933" width="11.235391" height="11.039455"/>
+								<rect x="36.417637" y="38.822006" rx="1.3847109" ry="1.345933" width="11.235391" height="11.039455"/>
+								<rect x="53.880154" y="38.822006" rx="1.3847109" ry="1.345933" width="11.235391" height="11.039455"/>
+								<rect x="20.013454" y="56.284523" rx="1.3847109" ry="1.345933" width="11.235391" height="11.039455"/>
+								<rect x="36.417637" y="56.284523" rx="1.3847109" ry="1.345933" width="11.235391" height="11.039455"/>
+								<path d="m 47.426975,73.152777 v 5.799749 H 13.229166 c -3.2820504,0 -5.3985067,-2.46731 -5.3985067,-5.398508 V 21.048583 c 0,-2.648778 2.1773327,-5.398506 5.3985067,-5.398506 h 3.316487 v 5.60331 c 0,2.287057 3.27809,3.482708 6.032228,3.482708 2.822118,0 6.087984,-1.357778 6.087984,-3.514899 V 15.73021 h 33.330639 v 5.490104 c 0,2.738462 3.341472,3.494899 6.053344,3.494899 2.617461,0 6.250178,-0.611786 6.250178,-3.608542 v -5.508752 h 3.884345 c 2.557977,0 4.299479,1.338796 4.299479,4.299479 V 43.779855 H 76.940213 V 32.460991 H 14.039453 V 73.15306 Z"/>
+							</g>
+							<g stroke-linecap="round" stroke-linejoin="round">
+								<path stroke-width="6" d="M 22.45064,17.938233 V 7.2507924"/>
+								<path d="M 67.958987,17.938233 V 7.2507924" stroke-width="6"/>
+								<circle fill="none" stroke-width="5.5" cx="76.795311" cy="73.078644" r="20.018072"/>
+								<path fill="none" stroke-width="5.5" d="M 84.985025,75.701857 H 73.853251 V 64.64024"/>
+							</g>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#" title="Úlohy">
+						<svg viewBox="0 0 100 100" width="40" height="40" stroke-width="0">
+							<path d="M 10.787013,85.050326 V 22.384693 c 0,-4.854801 2.192667,-7.198285 7.184318,-7.198285 h 10.821356 l 3.701957,-3.726799 2.785174,-0.10797 2.047723,-7.3277973 c 0.445128,-1.6612422 2.270104,-2.6800131 4.408147,-2.6800131 h 5.732746 c 2.911664,0 3.726918,1.4185551 4.068399,2.6929809 l 1.805525,7.0342355 h 3.426378 l 4.464694,4.489486 h 9.708095 c 4.781891,0 7.363837,2.109257 7.363837,7.392368 v 16.087495 l -7.274077,7.288219 V 24.433191 c 0,-1.325078 -0.774723,-1.95137 -1.970135,-1.95137 h -9.966811 v 5.719452 c 0,1.045895 -0.703661,1.763025 -1.784703,1.763025 H 31.758248 c -1.65034,0 -2.133242,-0.890308 -2.133242,-2.16206 v -4.946292 h -9.806049 c -1.283498,0 -1.757869,0.601225 -1.757869,1.789938 v 58.177457 c 0,1.353844 0.558285,1.763026 1.784705,1.763026 h 11.920546 l -7.266902,7.295412 H 17.59102 c -5.024385,0 -6.804007,-2.275205 -6.804007,-6.831453 z M 47.235419,6.3009692 C 45.897668,4.9665675 43.48279,5.2427455 42.121494,6.2654322 40.760198,7.2881189 40.73355,8.9640953 40.815894,11.231511 l 7.863257,0.02659 c 0,-1.9782816 -0.105981,-3.6227301 -1.443732,-4.9571318 z"/>
+							<path d="m 62.110937,45.231251 c 2.281662,0 2.64314,-0.19459 2.64314,-1.526019 v -4.883227 c 0,-0.672374 -0.317424,-1.490385 -1.490385,-1.490385 H 25.399999 c -1.149972,0 -1.490386,0.440556 -1.490386,1.490385 v 4.954037 c 0,0.945091 0.236196,1.490385 1.490386,1.490385 l 36.710938,-0.03518 z"/>
+							<path d="M 58.84522,57.507486 H 25.399999 c -0.9198,0 -1.069609,-0.910202 -1.069609,-1.852618 v -4.371274 c 0,-0.890018 0.31793,-1.422135 1.422134,-1.422135 h 37.717307 c 1.319224,0.0794 1.461099,1.560317 1.461099,1.560317 z"/>
+							<path d="M 54.144617,62.208089 H 25.929166 c -1.302753,0 -1.610639,0.59664 -1.610639,1.610638 v 4.563287 c 0,1.461176 1.164918,1.541587 2.670108,1.541587 h 19.44047 z"/>
+							<path d="m 87.479701,51.666912 -6.532958,-6.552197 3.704246,-3.718359 c 0.999053,-0.999053 2.679204,-1.122986 3.80219,0 l 9.492401,9.526695 c 0.781096,0.781096 1.040412,2.191728 0.681018,2.551122 l -2.29508,2.372467 c -1.262291,1.304856 -2.300427,2.372466 -2.306967,2.372466 -0.0066,0 -2.951723,-2.948485 -6.54485,-6.552194 z m 7.969954,2.539944 c 0.377366,-0.505625 -0.02633,-1.100188 -0.471661,-1.889654 l -4.315697,-4.356551 -4.315697,-4.356554 -2.203601,2.26517 c 0,0 1.916544,1.947681 4.258988,4.253614 l 4.258985,4.192604 c 0.893412,0.327549 1.988142,0.52358 2.788683,-0.108629 z"/>
+							<path d="m 78.579248,47.268898 -2.396965,2.380722 13.199724,13.110276 c 0,0 2.821836,-2.536432 2.610391,-2.592705 -0.211444,-0.05627 -13.41315,-12.898293 -13.41315,-12.898293 z"/>
+							<path d="m 47.690605,80.543574 -0.0011,-2.17165 L 73.621366,52.440063 86.651586,65.480756 59.664099,92.51031 Z M 70.615698,66.271355 c 0.386365,-0.740974 0.524853,-1.448146 -0.0535,-2.057568 -1.207246,-0.574545 -2.132469,-0.343314 -3.036507,-0.05155 l -15.576645,15.207552 1.958917,1.972081 c 0.418514,0.418514 1.394826,0.29275 1.687576,0 z m 5.699474,-5.713115 c 0.544229,-0.844806 0.728524,-1.742285 0,-2.773348 -1.133848,-0.309338 -1.699616,-0.145275 -2.287929,0 l -1.500616,1.497136 c -0.328768,0.90527 -0.392287,1.789319 0.05664,2.632373 0.960571,0.293978 1.75354,0.298462 2.371119,0 z"/>
+							<path d="m 40.446428,99.262849 5.19881,-19.146555 0.04595,2.378911 11.833309,11.962947 -16.879193,4.986476 c -0.26486,0.07097 -0.265853,0.06818 -0.198876,-0.181779 z m 12.720523,-6.064488 -6.86179,-6.942798 -1.988015,5.839818 2.761936,2.835662 z"/>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<h2>Názov podstránky</h2>
+			<!--Prihlasenie.html-->
+			<div id="log-in" class="access-account hidden">
+					<ul>
+						<li class="access-account">Prihlásenie</li>
+						<li class="create-account">Registrácia</li>
+					</ul>
+					<form method="post" action="access-account.php">
+						<fieldset>
+							<legend>Prihlásenie</legend>
+							<label>
+								<span>Prihlasovacie meno</span>
+								<i class="hint hidden">Povolených je max. 15 znakov (písmená bez diakritiky a číslice - nie na začiatku)</i>
+								<input type="text" name="nick" value="" placeholder="Prihlasovacie meno" pattern="[A-Za-z][A-Za-z0-9]*" maxlength="15" required>
+							</label>
+							<label>
+								<span>Heslo</span>
+								<input type="password" name="pass" value="" placeholder="Heslo" minlength="6" required>
+								<span class="new-password">Nepamätám si heslo</span>
+							</label>
+							<span>
+								<button type="submit">Prihlásiť</button>
+							</span>
+						</fieldset>
+					</form>
+					<form method="post" action="new-password.php">
+						<fieldset>
+							<legend>Zabudnuté heslo</legend>
+							<label>
+								<span>Zadajte vaše prihlasovacie meno</span>
+								<input type="text" name="nick" value="" placeholder="Prihlasovacie meno" pattern="[A-Za-z][A-Za-z0-9]*" maxlength="15">
+							</label>
+							<label>
+								<span>Ak ste zabudli aj Prihlasovacie meno zadajte e-mail.</span>
+								<input type="email" name="email" value="" placeholder="e-mail">
+							</label>
+							<span class="info">Vaše nové prihlasovacie údaje boli odoslané na váš e-mail!</span>
+							<span class="info">Konto s takýmto prihlasovacím menom alebo e-mailom neexistuje!</span>
+							<span>
+								<button class="access-account" type="reset">Späť</button>
+								<button type="submit">Odoslať</button>
+							</span>
+						</fieldset>
+					</form>
+					<form method="post" action="create-account.php">
+						<fieldset>
+							<legend>Registrácia</legend>
+
+							<label>
+								<span>Prihlasovacie meno</span>
+								<i class="hint hidden">Povolených je max. 15 znakov (písmená bez diakritiky a číslice - nie na začiatku)</i>
+								<input type="text" name="nick" value="" placeholder="Prihlasovacie meno" pattern="[A-Za-z][A-Za-z0-9]*" maxlength="15" required>
+							</label>
+
+							<label>
+								<span>E-mail</span>
+								<input type="email" name="email" value="" placeholder="e-mail" required>
+							</label>
+
+							<label>
+								<span>Heslo</span>
+								<input type="password" name="pass" value="" placeholder="Heslo" minlength="6" required>
+							</label>
+
+							<label>
+								<span>Heslo (znovu)</span>
+								<input type="password" name="pass2" value="" placeholder="Heslo" minlength="6" required>
+							</label>
+
+							<button type="submit">Zaregistrovať sa</button>
+						</fieldset>
+					</form>
+					<!--prepínanie formulárov-->
+					<script>
+						(function(){
+							const forms = document.querySelector("#log-in");
+							if (forms == null) return
+							const formSwitchers = forms.querySelectorAll(".access-account, .create-account, .new-password")
+							function selectForm(e) { forms.className = e.target.className }
+							for (switcher in formSwitchers)
+								if (switcher < formSwitchers.length)
+									formSwitchers[switcher].addEventListener("click", selectForm)
+						})()
+					</script>
+
+					<!--kontrola vstupov-->
+					<script>
+						(function(){
+							const checking = document.querySelectorAll("i.hint+input[pattern]")
+
+							function check(e) {
+								const el = e.target
+								const prev = el.previousElementSibling
+								if (el == null || prev == null || !el.hasAttribute("pattern")) return
+								const reg = new RegExp(`^${el.getAttribute("pattern")}$`)
+								if (el.value == "" || el.value.match(reg)) prev.classList.add("hidden")
+								else prev.classList.remove("hidden")
+							}
+							if (checking != null) checking.forEach((item, i) => { item.oninput = check });
+						})()
+					</script>
+			</div>
+
+			<!--Účet-->
+			<div id="user-account" class="hidden">
+				<div id="user-profile-picture-box">
+					<div id="user-picture-zone">
+						<svg viewBox="0 0 40 40" width="200" height="200">
+						    <path stroke-width="0" d="M 39.999999,39.999999 H 4.9993032e-7 v -4.34749 L 13.645542,26.912239 v -3.63104 c -1.872406,0 -3.446551,-2.17911 -3.446551,-3.51579 V 8.2394695 c 0,-2.64654 4.448832,-8.23947 9.97991,-8.23947 5.531075,0 9.712545,5.61375 9.712545,8.18141 V 19.765409 c 0,1.33668 -1.52757,3.51579 -3.461839,3.51579 v 3.62129 l 13.532626,7.72389 z"/>
+						</svg>
+						<img src="https://media0.webgarden.com/images/media0:4e2b6b54034a9.jpg/wall_ANIMALSINLOVE_1280x1024_07.jpg" alt="Profilová fotka" width="200" height="200">
+					</div>
+					<div id="user-picture-options">
+						<div><span class="fa fa-edit" title="Zmeniť fotku profilu"></span><span>Zmeniť fotku profilu</span></div>
+						<div><span class="fa fa-remove" title="Odstrániť fotku profilu"></span><span>Odstrániť fotku profilu</span></div>
+					</div>
+				</div>
+				<div id="user-sensitive-data">
+					<div>
+						<span class="fa fa-edit"></span>
+						<span>Celé meno</span>
+						<span>Meno Priezvisko</span>
+					</div>
+					<div>
+						<span class="fa fa-edit"></span>
+						<span>Nick</span>
+						<span>nick</span>
+					</div>
+					<div>
+						<span class="fa fa-edit"></span>
+						<span>E-mail</span>
+						<span><a href="mailto:nick@email.abb">nick@email.abb</a></span>
+					</div>
+					<div id="delete-account">
+						<a href="#">Zrušiť účet</a>
+					</div>
+				</div>
+				<div id="user-stats">
+					<table>
+						<tr>
+							<td>Počet predmetov</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Počet fotiek v galérii</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Nesplnené úlohy</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Úlohy blížiacich sa termínov</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Celkový počet úloh</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div id="gallery" class="">
+				<div id="image-set">
+					<div class="frame">
+						<div class="picture">
+							<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/chattanooga/Greeter_Falls_South_Cumberland_State_Park_b1d6224e-bba4-4e98-99eb-30401231b83f.jpg" alt="">
+						</div>
+						<div class="manipulation">
+							<span class="fa fa-user" title="Nastaviť ako profil"></span>
+							<span class="fa fa-table" title="Použiť v dizajne rozvrhu"></span>
+							<span class="fa fa-remove" title="Vymazať"></span>
+						</div>
+					</div>
+					<div class="frame">
+						<div class="picture">
+							<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/chattanooga/Greeter_Falls_South_Cumberland_State_Park_b1d6224e-bba4-4e98-99eb-30401231b83f.jpg" alt="">
+						</div>
+						<div class="manipulation">
+							<span class="fa fa-user" title="Nastaviť ako profil"></span>
+							<span class="fa fa-table" title="Použiť v dizajne rozvrhu"></span>
+							<span class="fa fa-remove" title="Vymazať"></span>
+						</div>
+					</div>
+					<div class="frame">
+						<div class="picture">
+							<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/chattanooga/Greeter_Falls_South_Cumberland_State_Park_b1d6224e-bba4-4e98-99eb-30401231b83f.jpg" alt="">
+						</div>
+						<div class="manipulation">
+							<span class="fa fa-user" title="Nastaviť ako profil"></span>
+							<span class="fa fa-table" title="Použiť v dizajne rozvrhu"></span>
+							<span class="fa fa-remove" title="Vymazať"></span>
+						</div>
+					</div>
+					<div class="frame">
+						<div class="picture">
+							<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/chattanooga/Greeter_Falls_South_Cumberland_State_Park_b1d6224e-bba4-4e98-99eb-30401231b83f.jpg" alt="">
+						</div>
+						<div class="manipulation">
+							<span class="fa fa-user" title="Nastaviť ako profil"></span>
+							<span class="fa fa-table" title="Použiť v dizajne rozvrhu"></span>
+							<span class="fa fa-remove" title="Vymazať"></span>
+						</div>
+					</div>
+					<div class="frame">
+						<div class="picture">
+							<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/chattanooga/Greeter_Falls_South_Cumberland_State_Park_b1d6224e-bba4-4e98-99eb-30401231b83f.jpg" alt="">
+						</div>
+						<div class="manipulation">
+							<span class="fa fa-user" title="Nastaviť ako profil"></span>
+							<span class="fa fa-table" title="Použiť v dizajne rozvrhu"></span>
+							<span class="fa fa-remove" title="Vymazať"></span>
+						</div>
+					</div>
+					<div class="frame">
+						<div class="picture">
+							<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/chattanooga/Greeter_Falls_South_Cumberland_State_Park_b1d6224e-bba4-4e98-99eb-30401231b83f.jpg" alt="">
+						</div>
+						<div class="manipulation">
+							<span class="fa fa-user" title="Nastaviť ako profil"></span>
+							<span class="fa fa-table" title="Použiť v dizajne rozvrhu"></span>
+							<span class="fa fa-remove" title="Vymazať"></span>
+						</div>
+					</div>
+					<div class="frame">
+						<div class="picture">
+							<img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/chattanooga/Greeter_Falls_South_Cumberland_State_Park_b1d6224e-bba4-4e98-99eb-30401231b83f.jpg" alt="">
+						</div>
+						<div class="manipulation">
+							<span class="fa fa-user" title="Nastaviť ako profil"></span>
+							<span class="fa fa-table" title="Použiť v dizajne rozvrhu"></span>
+							<span class="fa fa-remove" title="Vymazať"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--Koniec kontajnera-->
+		<footer>Vytvoril: <a href="#">Šimon Janovič</a></footer>
+	</div>
+</body>
+</html>
