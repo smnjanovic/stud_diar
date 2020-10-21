@@ -156,7 +156,6 @@ a:visited {
 
   #user-bar, footer {
     grid-column: span 2;
-    grid-template-rows:
   }
 
   nav, main {
@@ -261,5 +260,5 @@ footer {
 
 main h2 {
   margin: 1em 1em 2em 1em;
-  pading: 0;
+  padding: 0;
 }
