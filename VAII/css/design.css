@@ -1,0 +1,216 @@
+#design-container {
+  width: 100%;
+}
+
+#edit-tools {
+
+}
+
+#design-frame {
+  position: relative;
+  padding: 4px;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#edit-tools.hidden+#design-frame {
+  height:100%;
+}
+
+#frame-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#frame-actions ul {
+  padding: 0;
+  margin: 0;
+}
+
+#frame-actions li {
+  display: block;
+  padding:0.25em;
+  border: 2px solid rgba(0,0,0,0.5);;
+  cursor: pointer;
+  filter: grayscale(0.2);
+  fill: rgba(0,0,0,0.75);
+  stroke: rgba(0,0,0.75);
+}
+
+#frame-actions li:hover {
+  filter: none;
+  fill: rgba(0,0,0,0.7);
+  stroke: rgba(0,0,0.7);
+}
+
+#design-save {
+  background: hsl(235, 90%, 75%);
+}
+
+#design-show-tools {
+  background: hsl(45, 95%, 55%);
+}
+
+#add-image {
+  background: hsl(115, 95%, 45%);
+}
+
+#clear-image {
+  background: hsl(10, 95%, 55%);
+}
+
+#drawable {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  background: yellow;
+}
+
+#edit-tools {
+  position: relative;
+  overflow-y: auto;
+  background:hsla(55, 75%, 20%, 0.45);
+}
+
+#edit-tools .fa-close {
+  padding: 4px;
+  cursor: pointer;
+}
+
+#edit-tools .fa-close:hover {
+  color:#D10;
+}
+
+#toolbox-header {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#tool-options {
+  flex-grow: 1;
+}
+
+#tool-options ul {
+  margin: 0;
+  padding: 0;
+}
+
+#schedule-settings-form, #position-settings-form, #color-settings-form {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.edit-tool-group {
+  padding: 20px;
+}
+
+#edit-tools span, #edit-tools input:not([type=range]), #edit-tools select, #edit-tools option {
+  padding: 4px;
+  vertical-align: middle;
+}
+
+#schedule-settings-form span,
+#schedule-settings-form input,
+#schedule-settings-form select {
+  width: 100%;
+}
+
+#color-settings-form span input[type=range] {
+  width:calc(100% - 3em);
+  padding: 4px;
+}
+
+#schedule-settings-form select:first-child,
+#color-settings-form span:first-child,
+#schedule-settings-form button {
+  grid-column: span 2;
+}
+
+#resolution-in-text input[type=number] {
+  width: 4em;
+}
+
+@media only screen and (max-width: 580px) {
+  #design-container {
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+    height: 85vh;
+    min-height: 400px;
+  }
+
+  #design-frame, #edit-tools {
+    position: relative;
+    width: 100%;
+  }
+
+  #design-frame {
+    height:65%;
+  }
+
+  #edit-tools.hidden+#design-frame {
+    height:100%;
+  }
+}
+
+#tool-options ul {
+  margin: 0;
+}
+
+#tool-options li {
+  padding: 4px;
+  margin: 4px;
+  display: inline-block;
+  border-radius: 4px;
+  fill: white;
+  stroke: white;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+
+#edit-tools.color-settings #tool-options li.color-settings,
+#edit-tools.color-position-settings #tool-options li.color-position-settings,
+#edit-tools.resolution-settings #tool-options li.resolution-settings,
+#edit-tools.schedule-settings #tool-options li.schedule-settings,
+#tool-options li:hover {
+  fill: #FFA;
+  stroke: #FFA;
+  border-color: #FFA;
+}
+
+#edit-tools.color-settings .edit-tool-group:not(#color-settings),
+#edit-tools.color-position-settings .edit-tool-group:not(#position-settings),
+#edit-tools.resolution-settings .edit-tool-group:not(#resolution-settings),
+#edit-tools.schedule-settings .edit-tool-group:not(#schedule-settings) {
+    display: none;
+}
+
+@media only screen and (min-width: 580px) {
+  #design-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 85vh;
+  }
+
+  #edit-tools {
+    width: max-content;
+    min-width: 250px;
+  }
+
+  #design-frame {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,190 @@
+#subjects {
+  position: sticky;
+  border-style: solid;
+  border: solid 0 hsl(15, 75%, 55%);
+  background: hsl(15, 10%, 33%);
+  padding: 0.4em 0.2em;
+}
+
+#subjects ul {
+  padding: 0;
+  margin: 0;
+}
+
+#subjects li {
+  font-size: 1.25em;
+  padding: 0.2em 0.5em;
+  border: 1px solid transparent;
+}
+
+#subjects li:hover, #subjects li.active {
+  background: hsla(0, 100%, 100%, 0.25);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 648px) {
+  #subjects {
+    top: 4em;
+    border-bottom-width: 3px;
+    overflow-x: auto;
+  }
+
+  #subjects ul {
+    display: inline-flex;
+  }
+
+  #subjects li {
+    display: block;
+  }
+
+  #subjects li:hover {
+    border-color: hsl(15, 75%, 55%);
+  }
+
+  #subjects li span:last-child {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 648px) {
+  main {
+    position: relative;
+  }
+
+  #notes-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: stretch;
+    overflow-y: auto;
+  }
+
+  #subjects, #notes {
+    height: 100%;
+  }
+
+  #subjects {
+    top: 0;
+    bottom: 0;
+    height:100%;
+    border-right-width: 3px;
+    overflow-y: auto;
+  }
+
+  #subjects li {
+    display: flex;
+    align-items: center;
+  }
+
+  #subjects li span:first-child {
+    flex-grow: 1;
+    color: hsl(15, 75%, 85%);
+  }
+
+  #subjects li span:last-child {
+    margin-left: 0.5em;
+    padding: 0.2em 0.5em;
+    font-size: 0.6em;
+    border-radius: 50%;
+    background: hsla(0, 75%, 50%, 0.55);
+  }
+
+  #subjects li:hover {
+    border-color: hsl(15, 75%, 55%);
+  }
+
+  #notes {
+    flex-grow: 1;
+  }
+}
+
+#notes ul {
+  margin: 0;
+  padding: 0;
+}
+
+#notes input[type=date] {
+  margin: 0.2em 0 0 1em;
+}
+
+#notes textarea {
+  margin: 0.2em 1em;
+  width: calc(100% - 2.5em);
+  min-height: 4em;
+  resize: vertical;
+}
+
+#notes {
+  width: 100%;
+  max-width: 1024px;
+  height:auto;
+}
+
+.note {
+  background: hsla(0, 100%, 100%, 0.75);
+  padding: 8px;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.note .writable form, .note #new-note form, .note .readonly {
+  display: flex;
+  align-items: center;
+}
+
+.note .editable, .note .readonly :first-child {
+  flex-grow: 1;
+}
+
+.note.active .readonly, .note:not(.active) .writable {
+  display: none;
+}
+
+.note .decision, .note .actions {
+  width: 6em;
+  text-align: right;
+}
+
+.note .datetime {
+  font-style: italic;
+  font-size: 1em;
+  margin: 0 0 0.5em 0.5em;
+}
+
+.note .info {
+  font-size: 1.1em;
+  padding: 0.5em;
+}
+
+.note button {
+  padding: 0.35em;
+  cursor: pointer;
+}
+
+.note button.fa-remove {
+  background: hsl(0, 75%, 50%);
+}
+
+.note button.fa-remove:hover {
+  background: hsl(0, 75%, 65%);
+}
+
+.note button.fa-edit {
+  background: hsl(55, 75%, 50%);
+}
+
+.note button.fa-edit:hover {
+  background: hsl(55, 75%, 65%);
+}
+
+.note button.fa-save {
+  background: hsl(210, 75%, 65%);
+}
+
+.note button.fa-save:hover {
+  background: hsl(210, 75%, 80%);
+}
