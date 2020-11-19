@@ -42,9 +42,9 @@
   color: #FFE;
 }
 
-#log-in.access-account form:not([action^=access-account]),
-#log-in.create-account form:not([action^=create-account]),
-#log-in.new-password form:not([action^=new-password]) {
+#log-in.access-account form:not([name=access-account]),
+#log-in.create-account form:not([name=create-account]),
+#log-in.new-password form:not([name=new-password]) {
   display: none;
 }
 
@@ -59,7 +59,7 @@
   align-items: center;
 }
 
-#log-in form[action^=new-password] span:last-child {
+#log-in form[name=new-password] span:last-child {
   flex-flow: row wrap;
 }
 
