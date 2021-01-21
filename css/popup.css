@@ -1,0 +1,251 @@
+#popup-zone {
+  background: rgb(0,0,0,0.25);
+  position:fixed;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#popup-zone:empty, #popup-zone span:empty {
+  display: none;
+}
+
+#popup-zone .popup:not(:last-child) {
+  display: none;
+}
+
+#popup-zone .popup {
+  background: rgb(204, 204, 204);
+  color: black;
+  padding: 0.5em;
+  border-radius: 0.35em;
+  border: 3px solid rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#popup-zone .popup-body {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#popup-zone .popup-body h3 {
+  font-size: 1.5em;
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+#popup-zone .popup-body p {
+  margin: 1em 0;
+  padding: 0;
+  text-align: center;
+}
+
+#popup-zone .popup-action {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+#popup-zone .popup-action button {
+  margin: 0 0.25em;
+  min-width: 6em;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  cursor: pointer;
+}
+
+#popup-zone .popup.confirm {
+  background: hsl(200, 65%, 65%);
+}
+
+#popup-zone .popup.confirm button {
+  background: hsl(200, 65%, 85%);
+}
+
+#popup-zone .popup.confirm button:hover {
+  background: hsl(200, 65%, 80%);
+}
+
+#popup-zone .popup.alert {
+  background: hsl(60, 65%, 65%);
+}
+
+#popup-zone .popup.alert button {
+  background: hsl(60, 65%, 85%);
+}
+
+#popup-zone .popup.alert button:hover {
+  background: hsl(60, 65%, 80%);
+}
+
+#popup-zone .popup.prompt {
+  background: hsl(125, 65%, 65%);
+}
+
+#popup-zone .popup.prompt button {
+  background: hsl(125, 65%, 85%);
+}
+
+#popup-zone .popup.prompt button:hover {
+  background: hsl(125, 65%, 80%);
+}
+
+#popup-zone .popup.prompt .filter {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#popup-zone .popup.prompt .filter ul:empty {
+  display: none;
+}
+
+#popup-zone .popup.prompt .filter ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  border: 3px ridge #5A5;
+  background: #FAFFFA;
+}
+
+#popup-zone .popup.prompt .filter li {
+  display: block;
+  padding: 2px;
+  cursor: pointer;
+  font-weight: 100;
+}
+
+#popup-zone .popup.prompt .filter li:hover,
+#popup-zone .popup.prompt .filter li.active {
+  background: #AEA;
+}
+
+#popup-zone .popup.options {
+  background: hsl(260, 50%, 70%);
+}
+
+#popup-zone .popup.options table {
+  border-collapse: collapse;
+}
+
+#popup-zone .popup.options tr {
+  background: rgba(255, 255, 255, 0.25);
+  border-top: solid 3px hsl(260, 50%, 70%);
+  border-bottom: solid 3px hsl(260, 50%, 70%);
+  cursor: pointer;
+}
+
+#popup-zone .popup.options tr:hover,
+#popup-zone .popup.options tr.active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#popup-zone .popup.upload {
+  background: hsl(19, 75%, 65%);
+}
+
+#popup-zone .popup.upload form {
+  width: 100%;
+  text-align: center;
+}
+
+#popup-zone .popup.upload label {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  border: 4px dashed hsl(19, 65%, 30%);
+  background: hsl(19, 56%, 55%);
+  cursor: pointer;
+}
+
+#popup-zone .popup.upload label:hover {
+  filter: brightness(1.15);
+}
+
+#popup-zone .popup.upload input[type=file] {
+  display: none;
+}
+
+#popup-zone .popup.upload button {
+  background: hsl(19, 65%, 85%);
+}
+
+#popup-zone .popup.upload button:hover {
+  background: hsl(19, 65%, 80%);
+}
+
+
+
+#popup-zone .popup.upload label span {
+  font-weight: 600;
+  color: hsl(19, 65%, 30%);
+}
+
+#popup-zone .popup.options td {
+  padding: 5px;
+}
+
+#popup-zone .popup .input-zone {
+  width: 100%;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#popup-zone .popup .input-zone span,
+#popup-zone .popup .input-zone input,
+#popup-zone .popup .input-zone textarea {
+  display: block;
+  margin: 0.1em auto;
+  width: 100%;
+}
+
+#popup-zone .popup textarea {
+  resize: vertical;
+}
+
+#popup-zone .popup .field {
+  padding-top: 0.5em;
+}
+
+#popup-zone .popup .input-zone .error {
+  color: red;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+@media only screen and (max-width: 340px) {
+  #popup-zone .popup {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (min-width: 340px) {
+  #popup-zone .popup {
+    width: 40vw;
+    min-width: 340px;
+    max-width: 524px;
+  }
+  #popup-zone .popup.prompt .input-zone, #popup-zone .popup.options ul {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+}

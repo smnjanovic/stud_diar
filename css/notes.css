@@ -1,0 +1,207 @@
+main {
+  position: relative;
+}
+
+main>div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+main>div>div {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height:100%;
+  grid-template-columns: auto;
+  grid-template-rows: max-content auto;
+}
+
+#categories {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: #292929;
+  padding-top: 4px;
+  align-items: center;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 579.9px) {
+  #categories {
+    flex-flow: row wrap;
+  }
+
+  #categories>div {
+    width: calc(50% - 8px);
+  }
+
+  #categories input, #categories select {
+    width: 100%;
+    max-width: 300px;
+    padding: 4px;
+  }
+
+  #categories>#category-description {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (min-width: 580px) {
+  #categories {
+    flex-flow: row wrap;
+  }
+
+  #categories input, #categories select {
+    max-width: 140px;
+    padding: 4px;
+  }
+}
+
+#categories>* {
+  margin: 0 4px;
+}
+
+#queries {
+  position:relative;
+}
+
+#queries>div:last-child {
+  height: 0;
+}
+
+#queries ul {
+  color: black;
+  margin:0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  max-height: 60vh;
+}
+
+#queries ul li {
+  display:block;
+  width:100%;
+  background: #ddd;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#queries ul li:hover, #queries ul li.active {
+  background: #EEA;
+}
+
+#category-description {
+  background: #292929;
+  flex-grow: 1;
+}
+
+#notes-container {
+  flex-grow: 1;
+  border-top: 1px solid #222;
+  border-left: 1px solid #222;
+  position: relative;
+  overflow-y: auto;
+}
+
+#new-note {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2px;
+  background: #3A3A3A;
+  text-shadow: 0 0 3px black, 0 0 2px black, 0 0 1px black;
+}
+
+#new-note>span {
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+#new-note>span:hover {
+  color: #EEA;
+}
+
+#new-note span.fa {
+  padding: 8px 4px;
+}
+
+.note {
+  display: grid;
+  grid-template-columns: min-content auto max-content max-content;
+  grid-template-rows: auto auto;
+  background: #DDD;
+  color: black;
+  margin: 8px 4px;
+  width: calc(100% - 8px);
+  max-width: 1280px;
+  padding: 0.2em;
+  align-items: center;
+  cursor: pointer;
+}
+
+.note .subject {
+  font-size: 0.8em;
+  padding: 4px;
+  font-weight: bold;
+}
+
+.note .date:not(:empty) {
+  padding: 0.2em;
+  font-style: italic;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.note .info {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column: span 2;
+  padding: 0.2em;
+}
+
+.note:hover .edit:not(:hover) {
+    color: #662;
+}
+
+.note:hover .remove:not(:hover) {
+    color: #811;
+}
+
+.note .edit, .note .remove {
+  grid-row: span 2;
+  font-size: 1.5em;
+  margin: 4px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.note .edit {
+  color: #331;
+}
+
+.note .edit:hover {
+  color: #FB0;
+  text-shadow: 0px 0px 1px black, 0px 0px 2px black;
+}
+
+.note .remove {
+  color: #311;
+}
+
+.note .remove:hover {
+  color: #F00;
+  text-shadow: 0px 0px 1px black, 0px 0px 2px black;
+}
+
+.note .edit:hover, .note .remove:hover {
+  opacity: 1;
+}

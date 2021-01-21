@@ -1,0 +1,69 @@
+#image-set {
+  padding: 1em;
+}
+
+@media only screen and (min-width: 360px) {
+  #image-set {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 1em;
+  }
+}
+
+#gallery .frame {
+  position: relative;
+  width: 100%;
+  padding-top:67%;
+  height:0;
+  border: 2px solid #777;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+#gallery .picture {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#gallery .frame:hover {
+  border-color: #AAA;
+}
+
+#gallery img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.manipulation {
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.75)
+}
+
+.manipulation span {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.manipulation span.fa-copy:hover {
+  color: DodgerBlue;
+}
+
+.manipulation span.fa-table:hover {
+  color: lime;
+}
+
+.manipulation span.fa-user:hover {
+  color: yellow;
+}
+
+.manipulation span.fa-remove:hover {
+  color: red;
+}

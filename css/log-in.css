@@ -1,0 +1,71 @@
+#log-in {
+  max-width:1024px;
+  margin: 0 auto;
+}
+
+#log-in a.new-password {
+  color: #DD7;
+  padding: 4px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#log-in a.new-password:hover {
+  color: #FFE;
+}
+
+#log-in form {
+  display: block;
+}
+
+#log-in fieldset, #log-in fieldset>*:not(legend) {
+  margin: 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#log-in form[name=new-password] span:last-child {
+  flex-flow: row wrap;
+}
+
+#log-in button {
+  margin: 0 0.2em;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: 0;
+  border: 2px solid white;
+  color: white;
+  padding: 0.4em 0.8em;
+}
+
+#log-in button:hover, #log-in button:active, #log-in button:focus {
+  border-color: #EEA;
+  color: #EEA;
+}
+
+#log-in button:focus {
+  outline: none;
+}
+
+#log-in fieldset span {
+  padding: 0.4em 0;
+}
+
+#log-in .hint {
+  color: red;
+  font-size: 0.8em;
+}
+
+#log-in .info {
+  color: #DD7;
+  font-size: 0.8em;
+}
+
+#error-list {
+  color: hsl(0, 50%, 60%);
+}
